@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name ="viewport" content ="width=device-width, initial-scale=1">
+  <link rel ="stylesheet" type ="text/css" href="../../../assets/form_validation/form_validation.css">
+</head>
+<body>
+<div  class ="container-fluid background-image">
+  <div class ="row justify-content-center">
+    <div class ="header-container text-center">
+      <h1 class ="col-md-12 col-s-10 header-title ">Categories</h1>
+      <button class ="col-md-12 col-s-10 btn btn-warning header-button">scroll down to see full list</button>
+    </div>
+  </div>
+</div>
+<div  class ="container-fluid add-form-container">
+  <div  class="row justify-content-center">
+    <form  id="category-form" class="col-md-8 col-s-8 col-xs-8 m-md-4 m-s-3 m-xs-3"  #categoryForm="ngForm">
+
+      <div class="form-group">
+        <label for="category-name">Name</label>
+        <input id ="category-name" class="form-control" name="category-name" placeholder="category name" [(ngModel)]="newCategory.name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="category-username">UserName</label>
+        <input id="category-username" class="form-control" name="category-description"  placeholder="category user name" [(ngModel)]="newCategory.username" required />
+      </div>
+
+      <div class="form-group ">
+        <label for="category-mobile">Mobile</label>
+        <input id="category-mobile" class="form-control" name="category-mobile"  placeholder="123-456-789" [(ngModel)]="newCategory.phone" required />
+      </div>
+
+      <div class="form-group">
+        <label for="category-website">Website</label>
+        <input id="category-website" class="form-control" name="category-website"  placeholder="website-name.com" [(ngModel)]="newCategory.website" required />
+      </div>
+      <button (click)="createNewCategory(newCategory); categoryForm.reset()" type ="button"  class="btn btn-warning ">Add new category </button>
+    </form>
+  </div>
+</div>
+
+<div  class ="container-fluid" >
+  <div  class="row justify-content-center">
+    <div class="col-md-6 col-s-4 col-xs-2 m-md-3 m-s-2 m-xs-2">
+      <ul *ngFor="let category of categories" class="list-group">
+        <li class="list-group-item border border-warning">
+          {{ category.name }}
+          <div class ="offset-6">
+            <button (click)="showCategoryDetailsForm(category.id)" class="btn btn-info">Edit</button>
+            <button (click)="deleteSelectCategory(category.id)" class="btn btn-danger">Delete </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+<router-outlet></router-outlet>
+</html>
+
+
+
+
+
+
+

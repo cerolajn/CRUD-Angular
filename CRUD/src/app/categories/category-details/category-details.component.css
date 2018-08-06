@@ -1,0 +1,22 @@
+.body {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  position:relative;
+}
+.container-fluid {
+  background-color:#EFF2F9;
+  color:#49617B;
+  position:absolute;
+  top:5%;
+}
+.category-detail-header {
+  color:#49617B;
+  font-size:1.6em;
+  font-weight: bold;
+  letter-spacing:8px;
+  text-align:center;
+}
+
+
+

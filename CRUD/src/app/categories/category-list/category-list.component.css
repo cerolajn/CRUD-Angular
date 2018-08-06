@@ -1,0 +1,42 @@
+body {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+}
+
+.background-image {
+ background:url(../../../assets/images/alternative-background.jpg)no-repeat center center fixed;
+ background-size:cover;
+ width:100vw;
+ height:100vh;
+}
+
+.header-container {
+ margin-top:20%;
+}
+
+.header-title {
+color:#F7F7EF;
+font-size:3em;
+font-weight: bold;
+letter-spacing:8px;
+}
+
+.header-button {
+color:#F9E9D5;
+font-size:1.1em;
+font-weight: bold;
+letter-spacing:5px;
+}
+
+.add-form-container {
+background-color:#B5ADB3;
+color: #F9E9D5;
+font-size:1.2em;
+letter-spacing:5px;
+}
+
+
+
+
